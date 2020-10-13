@@ -9,9 +9,10 @@ parentDir = os.path.dirname(fileDir)
 print(parentDir)
 
 
-newPath = os.path.join(parentDir, 'fibo')   # Get the directory for StringFunctions
+newPath = os.path.join(parentDir, '')   # Get the directory for StringFunctions
 print(newPath)
 sys.path.append(newPath)
+print(f'syspath={sys.path}')
 
-import fibo2
-a=fibo2.fib(5)
+import fibo.fibo2
+a=fibo.fibo2.fib(5)
