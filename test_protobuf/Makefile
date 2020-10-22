@@ -2,4 +2,4 @@ all: build
 
 
 build:
-	protoc address.proto  --python_out=.
+	protoc addressbook.proto  --python_out=.
