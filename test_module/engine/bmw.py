@@ -1,5 +1,8 @@
 from engine.alpha.screen import sayScreen
 
+from .hongkong.tungchung import sayTungchung
+
+
 def sayBmw() :
-    sayScreen()
+    sayTungchung()
     print("i'm bmw")
