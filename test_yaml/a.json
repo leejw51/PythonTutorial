@@ -1,6 +1,6 @@
 {
     "chainmain-1": {
-        "cmd": "chain-maind",
+        "cmd": "disney",
         "start-flags": "--trace",
         "validators": [
             {

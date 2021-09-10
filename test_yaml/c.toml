@@ -1,5 +1,5 @@
 [chainmain-1]
-cmd = "chain-maind"
+cmd = "disney"
 start-flags = "--trace"
 
 [[chainmain-1.validators]]

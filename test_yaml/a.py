@@ -5,7 +5,7 @@ import tomlkit
 
 with open("a.yaml") as f: 
     b= yaml.load(f, Loader=yaml.FullLoader)
-
+b["chainmain-1"]["cmd"]="disney"
 myjson=json.dumps(b, indent=4)
 print(myjson)
 

@@ -17,7 +17,7 @@ chainmain-1:
     name: msigner1
   - coins: 2000cro
     name: msigner2
-  cmd: chain-maind
+  cmd: disney
   genesis:
     app_state:
       gov:
