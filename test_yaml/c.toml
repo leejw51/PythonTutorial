@@ -1,0 +1,62 @@
+[chainmain-1]
+cmd = "chain-maind"
+start-flags = "--trace"
+
+[[chainmain-1.validators]]
+coins = "10cro"
+staked = "10cro"
+
+[[chainmain-1.accounts]]
+name = "community"
+coins = "100cro"
+
+[[chainmain-1.accounts]]
+name = "ecosystem"
+coins = "200cro"
+
+[[chainmain-1.accounts]]
+name = "reserve"
+coins = "200cro"
+vesting = "60s"
+
+[[chainmain-1.accounts]]
+name = "launch"
+coins = "100cro"
+
+[[chainmain-1.accounts]]
+name = "signer1"
+coins = "10000cro"
+
+[[chainmain-1.accounts]]
+name = "signer2"
+coins = "2000cro"
+
+[[chainmain-1.accounts]]
+name = "msigner1"
+coins = "2000cro"
+
+[[chainmain-1.accounts]]
+name = "msigner2"
+coins = "2000cro"
+
+[chainmain-1.genesis]
+[chainmain-1.genesis.app_state]
+[chainmain-1.genesis.app_state.staking]
+[chainmain-1.genesis.app_state.staking.params]
+unbonding_time = "10s"
+
+[chainmain-1.genesis.app_state.gov]
+[chainmain-1.genesis.app_state.gov.voting_params]
+voting_period = "10s"
+
+[chainmain-1.genesis.app_state.gov.deposit_params]
+max_deposit_period = "10s"
+
+[[chainmain-1.genesis.app_state.gov.deposit_params.min_deposit]]
+denom = "basecro"
+amount = "10000000"
+
+[chainmain-1.genesis.app_state.transfer]
+[chainmain-1.genesis.app_state.transfer.params]
+receive_enabled = true
+send_enabled = true

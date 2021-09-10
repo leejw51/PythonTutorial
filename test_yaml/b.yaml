@@ -1,0 +1,41 @@
+chainmain-1:
+  accounts:
+  - coins: 100cro
+    name: community
+  - coins: 200cro
+    name: ecosystem
+  - coins: 200cro
+    name: reserve
+    vesting: 60s
+  - coins: 100cro
+    name: launch
+  - coins: 10000cro
+    name: signer1
+  - coins: 2000cro
+    name: signer2
+  - coins: 2000cro
+    name: msigner1
+  - coins: 2000cro
+    name: msigner2
+  cmd: chain-maind
+  genesis:
+    app_state:
+      gov:
+        deposit_params:
+          max_deposit_period: 10s
+          min_deposit:
+          - amount: '10000000'
+            denom: basecro
+        voting_params:
+          voting_period: 10s
+      staking:
+        params:
+          unbonding_time: 10s
+      transfer:
+        params:
+          receive_enabled: true
+          send_enabled: true
+  start-flags: --trace
+  validators:
+  - coins: 10cro
+    staked: 10cro
