@@ -1,0 +1,54 @@
+chains:
+- account_prefix: cosmos
+  clock_drift: 5s
+  gas_adjustment: 0.1
+  gas_price:
+    denom: stake
+    price: 0.001
+  grpc_addr: http://127.0.0.1:9090
+  id: ibc-0
+  key_name: testkey
+  max_gas: 3000000
+  max_msg_num: 30
+  max_tx_size: 2097152
+  rpc_addr: http://127.0.0.1:26657
+  rpc_timeout: 10s
+  store_prefix: ibc
+  trust_threshold:
+    denominator: '3'
+    numerator: '1'
+  trusting_period: 14days
+  websocket_addr: ws://127.0.0.1:26657/websocket
+- account_prefix: cosmos
+  clock_drift: 5s
+  gas_adjustment: 0.1
+  gas_price:
+    denom: stake
+    price: 0.001
+  grpc_addr: http://127.0.0.1:9091
+  id: ibc-1
+  key_name: testkey
+  max_gas: 3000000
+  max_msg_num: 30
+  max_tx_size: 2097152
+  rpc_addr: http://127.0.0.1:26557
+  rpc_timeout: 10s
+  store_prefix: ibc
+  trust_threshold:
+    denominator: '3'
+    numerator: '1'
+  trusting_period: 14days
+  websocket_addr: ws://127.0.0.1:26557/websocket
+global:
+  clear_packets_interval: 100
+  filter: false
+  log_level: info
+  strategy: packets
+rest:
+  enabled: true
+  host: 127.0.0.1
+  port: 3000
+telemetry:
+  enabled: true
+  host: 127.0.0.1
+  port: 3001
