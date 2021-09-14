@@ -9,4 +9,8 @@ mnemonics="night renew tonight dinner shaft scheme domain oppose echo summer bro
 account = w3.eth.account.from_mnemonic(mnemonics)    
 print(account.address)
 
-show_address(mnemonics,10)
+addr = account.address
+#show_address(mnemonics,10)
+print( w3.eth.accounts)
+c=w3.eth.get_balance(addr)
+print(f"account={addr} balance={c}")
