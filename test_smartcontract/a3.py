@@ -51,9 +51,10 @@ compiled_sol = compile_source(
 contract_id, contract_interface = compiled_sol.popitem()
 print(f'contraid_id {contract_id}')
 bytecode = contract_interface['bin']
-abi = contract_interface['abi']
-print(f'bytecode={bytecode}')
-print(f'abi={abi}')
+abi2 = contract_interface['abi']
+abi= json.dumps(abi2)
+print(f'{type(bytecode)}  bytecode={bytecode}')
+print(f'{type(abi)}  abi={abi}')
 w3.eth.defaultAccount = account
 
 # deploy
