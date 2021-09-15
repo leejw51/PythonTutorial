@@ -58,7 +58,7 @@ w3.eth.defaultAccount = account
 
 # deploy
 print(f"account={addr} balance={c}")
-sys.exit()
+
 Greeter = w3.eth.contract(abi=abi, bytecode=bytecode)
 nonce=w3.eth.get_transaction_count(account.address) 
 info={'from':account.address,'nonce':nonce,'gas':MYGAS, 'chainId':MYCHAINID}
